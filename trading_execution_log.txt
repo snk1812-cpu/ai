@@ -1,0 +1,242 @@
+2026-06-22 13:08:35 | INFO | No valid same-day token found. Requesting a new token.
+2026-06-22 13:08:35 | INFO | New access token issued and cached.
+2026-06-22 13:08:35 | INFO | Program started in MOCK mode. Symbol=005930, trading window=09:10-15:30
+2026-06-22 13:08:35 | INFO | Trading cycle started.
+2026-06-22 13:08:36 | INFO | Current price: 353500 KRW
+2026-06-22 13:08:36 | WARNING | API request failed: method=GET path=/uapi/domestic-stock/v1/trading/inquire-balance attempt=1/3 error=Temporary API response: 500 {"rt_cd":"1","msg1":"초당 거래건수를 초과하였습니다.","msg_cd":"EGW00201","message":"EGW00201"}
+2026-06-22 13:08:37 | INFO | Holdings before order: samsung_quantity=0 available_cash=10000000
+2026-06-22 13:08:37 | INFO | Buy order request: symbol=005930 price=352500 quantity=1
+2026-06-22 13:08:37 | WARNING | API request failed: method=POST path=/uapi/domestic-stock/v1/trading/order-cash attempt=1/3 error=Temporary API response: 500 {"rt_cd":"1","msg1":"초당 거래건수를 초과하였습니다.","msg_cd":"EGW00201","message":"EGW00201"}
+2026-06-22 13:08:38 | ERROR | Trading cycle failed.
+Traceback (most recent call last):
+  File "/workspaces/ai/trader.py", line 74, in run
+    self._run_cycle()
+  File "/workspaces/ai/trader.py", line 108, in _run_cycle
+    buy_result = submit_limit_order(
+                 ^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/ai/orders.py", line 35, in submit_limit_order
+    payload = client.request(
+              ^^^^^^^^^^^^^^^
+  File "/workspaces/ai/api_client.py", line 61, in request
+    raise RuntimeError(
+RuntimeError: KIS API error: msg_cd=40580000, msg1=모의투자 장종료 입니다.
+2026-06-22 13:08:38 | INFO | Next order cycle will not start before 13:13:38.
+2026-06-22 13:12:16 | INFO | Reusing cached access token for 2026-06-22.
+2026-06-22 13:12:16 | INFO | Program started in MOCK mode. Symbol=005930, trading window=09:10-15:30
+2026-06-22 13:12:16 | INFO | Trading window ended. Program will stop.
+2026-06-22 13:13:38 | INFO | Trading cycle started.
+2026-06-22 13:13:39 | INFO | Current price: 353500 KRW
+2026-06-22 13:13:39 | WARNING | API request failed: method=GET path=/uapi/domestic-stock/v1/trading/inquire-balance attempt=1/3 error=Temporary API response: 500 {"rt_cd":"1","msg1":"초당 거래건수를 초과하였습니다.","msg_cd":"EGW00201","message":"EGW00201"}
+2026-06-22 13:13:40 | INFO | Holdings before order: samsung_quantity=0 available_cash=10000000
+2026-06-22 13:13:40 | INFO | Buy order request: symbol=005930 price=352500 quantity=1
+2026-06-22 13:13:40 | WARNING | API request failed: method=POST path=/uapi/domestic-stock/v1/trading/order-cash attempt=1/3 error=Temporary API response: 500 {"rt_cd":"1","msg1":"초당 거래건수를 초과하였습니다.","msg_cd":"EGW00201","message":"EGW00201"}
+2026-06-22 13:13:41 | ERROR | Trading cycle failed.
+Traceback (most recent call last):
+  File "/workspaces/ai/trader.py", line 74, in run
+  File "/workspaces/ai/trader.py", line 108, in _run_cycle
+    "Buy order request: symbol=%s price=%s quantity=%s",
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/ai/orders.py", line 35, in submit_limit_order
+    payload = client.request(
+              ^^^^^^^^^^^^^^^
+  File "/workspaces/ai/api_client.py", line 61, in request
+    raise RuntimeError(
+RuntimeError: KIS API error: msg_cd=40580000, msg1=모의투자 장종료 입니다.
+2026-06-22 13:13:41 | INFO | Next order cycle will not start before 13:18:41.
+2026-06-22 13:18:41 | INFO | Trading cycle started.
+2026-06-22 13:18:42 | INFO | Current price: 353500 KRW
+2026-06-22 13:18:42 | WARNING | API request failed: method=GET path=/uapi/domestic-stock/v1/trading/inquire-balance attempt=1/3 error=Temporary API response: 500 {"rt_cd":"1","msg1":"초당 거래건수를 초과하였습니다.","msg_cd":"EGW00201","message":"EGW00201"}
+2026-06-22 13:18:43 | INFO | Holdings before order: samsung_quantity=0 available_cash=10000000
+2026-06-22 13:18:43 | INFO | Buy order request: symbol=005930 price=352500 quantity=1
+2026-06-22 13:18:43 | WARNING | API request failed: method=POST path=/uapi/domestic-stock/v1/trading/order-cash attempt=1/3 error=Temporary API response: 500 {"rt_cd":"1","msg1":"초당 거래건수를 초과하였습니다.","msg_cd":"EGW00201","message":"EGW00201"}
+2026-06-22 13:18:45 | ERROR | Trading cycle failed.
+Traceback (most recent call last):
+  File "/workspaces/ai/trader.py", line 74, in run
+  File "/workspaces/ai/trader.py", line 108, in _run_cycle
+    "Buy order request: symbol=%s price=%s quantity=%s",
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/ai/orders.py", line 35, in submit_limit_order
+    payload = client.request(
+              ^^^^^^^^^^^^^^^
+  File "/workspaces/ai/api_client.py", line 61, in request
+    raise RuntimeError(
+RuntimeError: KIS API error: msg_cd=40580000, msg1=모의투자 장종료 입니다.
+2026-06-22 13:18:45 | INFO | Next order cycle will not start before 13:23:45.
+2026-06-22 13:23:45 | INFO | Trading cycle started.
+2026-06-22 13:23:45 | INFO | Current price: 353500 KRW
+2026-06-22 13:23:45 | WARNING | API request failed: method=GET path=/uapi/domestic-stock/v1/trading/inquire-balance attempt=1/3 error=Temporary API response: 500 {"rt_cd":"1","msg1":"초당 거래건수를 초과하였습니다.","msg_cd":"EGW00201","message":"EGW00201"}
+2026-06-22 13:23:46 | INFO | Holdings before order: samsung_quantity=0 available_cash=10000000
+2026-06-22 13:23:46 | INFO | Buy order request: symbol=005930 price=352500 quantity=1
+2026-06-22 13:23:46 | WARNING | API request failed: method=POST path=/uapi/domestic-stock/v1/trading/order-cash attempt=1/3 error=Temporary API response: 500 {"rt_cd":"1","msg1":"초당 거래건수를 초과하였습니다.","msg_cd":"EGW00201","message":"EGW00201"}
+2026-06-22 13:23:47 | ERROR | Trading cycle failed.
+Traceback (most recent call last):
+  File "/workspaces/ai/trader.py", line 74, in run
+    )
+  File "/workspaces/ai/trader.py", line 108, in _run_cycle
+  File "/workspaces/ai/orders.py", line 35, in submit_limit_order
+    payload = client.request(
+              ^^^^^^^^^^^^^^^
+  File "/workspaces/ai/api_client.py", line 61, in request
+    raise RuntimeError(
+RuntimeError: KIS API error: msg_cd=40580000, msg1=모의투자 장종료 입니다.
+2026-06-22 13:23:47 | INFO | Next order cycle will not start before 13:28:47.
+2026-06-22 13:28:47 | INFO | Trading cycle started.
+2026-06-22 13:28:48 | INFO | Current price: 353500 KRW
+2026-06-22 13:28:48 | WARNING | API request failed: method=GET path=/uapi/domestic-stock/v1/trading/inquire-balance attempt=1/3 error=Temporary API response: 500 {"rt_cd":"1","msg1":"초당 거래건수를 초과하였습니다.","msg_cd":"EGW00201","message":"EGW00201"}
+2026-06-22 13:28:49 | INFO | Holdings before order: samsung_quantity=0 available_cash=10000000
+2026-06-22 13:28:49 | INFO | Buy order request: symbol=005930 price=352500 quantity=1
+2026-06-22 13:28:49 | WARNING | API request failed: method=POST path=/uapi/domestic-stock/v1/trading/order-cash attempt=1/3 error=Temporary API response: 500 {"rt_cd":"1","msg1":"초당 거래건수를 초과하였습니다.","msg_cd":"EGW00201","message":"EGW00201"}
+2026-06-22 13:28:50 | ERROR | Trading cycle failed.
+Traceback (most recent call last):
+  File "/workspaces/ai/trader.py", line 74, in run
+    )
+  File "/workspaces/ai/trader.py", line 108, in _run_cycle
+  File "/workspaces/ai/orders.py", line 35, in submit_limit_order
+    payload = client.request(
+              ^^^^^^^^^^^^^^^
+  File "/workspaces/ai/api_client.py", line 61, in request
+    raise RuntimeError(
+RuntimeError: KIS API error: msg_cd=40580000, msg1=모의투자 장종료 입니다.
+2026-06-22 13:28:50 | INFO | Next order cycle will not start before 13:33:50.
+2026-06-22 13:33:50 | INFO | Trading cycle started.
+2026-06-22 13:33:51 | INFO | Current price: 353500 KRW
+2026-06-22 13:33:51 | WARNING | API request failed: method=GET path=/uapi/domestic-stock/v1/trading/inquire-balance attempt=1/3 error=Temporary API response: 500 {"rt_cd":"1","msg1":"초당 거래건수를 초과하였습니다.","msg_cd":"EGW00201","message":"EGW00201"}
+2026-06-22 13:33:53 | INFO | Holdings before order: samsung_quantity=0 available_cash=10000000
+2026-06-22 13:33:53 | INFO | Buy order request: symbol=005930 price=352500 quantity=1
+2026-06-22 13:33:53 | ERROR | Trading cycle failed.
+Traceback (most recent call last):
+  File "/workspaces/ai/trader.py", line 74, in run
+    )
+  File "/workspaces/ai/trader.py", line 108, in _run_cycle
+  File "/workspaces/ai/orders.py", line 35, in submit_limit_order
+    payload = client.request(
+              ^^^^^^^^^^^^^^^
+  File "/workspaces/ai/api_client.py", line 61, in request
+    raise RuntimeError(
+RuntimeError: KIS API error: msg_cd=40580000, msg1=모의투자 장종료 입니다.
+2026-06-22 13:33:53 | INFO | Next order cycle will not start before 13:38:53.
+2026-06-22 13:38:53 | INFO | Trading cycle started.
+2026-06-22 13:38:53 | INFO | Current price: 353500 KRW
+2026-06-22 13:38:53 | WARNING | API request failed: method=GET path=/uapi/domestic-stock/v1/trading/inquire-balance attempt=1/3 error=Temporary API response: 500 {"rt_cd":"1","msg1":"초당 거래건수를 초과하였습니다.","msg_cd":"EGW00201","message":"EGW00201"}
+2026-06-22 13:38:55 | INFO | Holdings before order: samsung_quantity=0 available_cash=10000000
+2026-06-22 13:38:55 | INFO | Buy order request: symbol=005930 price=352500 quantity=1
+2026-06-22 13:38:55 | WARNING | API request failed: method=POST path=/uapi/domestic-stock/v1/trading/order-cash attempt=1/3 error=Temporary API response: 500 {"rt_cd":"1","msg1":"초당 거래건수를 초과하였습니다.","msg_cd":"EGW00201","message":"EGW00201"}
+2026-06-22 13:38:56 | ERROR | Trading cycle failed.
+Traceback (most recent call last):
+  File "/workspaces/ai/trader.py", line 74, in run
+    )
+  File "/workspaces/ai/trader.py", line 108, in _run_cycle
+  File "/workspaces/ai/orders.py", line 35, in submit_limit_order
+    payload = client.request(
+              ^^^^^^^^^^^^^^^
+  File "/workspaces/ai/api_client.py", line 61, in request
+    raise RuntimeError(
+RuntimeError: KIS API error: msg_cd=40580000, msg1=모의투자 장종료 입니다.
+2026-06-22 13:38:56 | INFO | Next order cycle will not start before 13:43:56.
+2026-06-22 13:43:56 | INFO | Trading cycle started.
+2026-06-22 13:43:57 | INFO | Current price: 353500 KRW
+2026-06-22 13:43:57 | WARNING | API request failed: method=GET path=/uapi/domestic-stock/v1/trading/inquire-balance attempt=1/3 error=Temporary API response: 500 {"rt_cd":"1","msg1":"초당 거래건수를 초과하였습니다.","msg_cd":"EGW00201","message":"EGW00201"}
+2026-06-22 13:43:58 | INFO | Holdings before order: samsung_quantity=0 available_cash=10000000
+2026-06-22 13:43:58 | INFO | Buy order request: symbol=005930 price=352500 quantity=1
+2026-06-22 13:43:58 | WARNING | API request failed: method=POST path=/uapi/domestic-stock/v1/trading/order-cash attempt=1/3 error=Temporary API response: 500 {"rt_cd":"1","msg1":"초당 거래건수를 초과하였습니다.","msg_cd":"EGW00201","message":"EGW00201"}
+2026-06-22 13:43:59 | ERROR | Trading cycle failed.
+Traceback (most recent call last):
+  File "/workspaces/ai/trader.py", line 74, in run
+    )
+  File "/workspaces/ai/trader.py", line 108, in _run_cycle
+  File "/workspaces/ai/orders.py", line 35, in submit_limit_order
+    payload = client.request(
+              ^^^^^^^^^^^^^^^
+  File "/workspaces/ai/api_client.py", line 61, in request
+    raise RuntimeError(
+RuntimeError: KIS API error: msg_cd=40580000, msg1=모의투자 장종료 입니다.
+2026-06-22 13:43:59 | INFO | Next order cycle will not start before 13:48:59.
+2026-06-22 13:48:59 | INFO | Trading cycle started.
+2026-06-22 13:49:00 | INFO | Current price: 353500 KRW
+2026-06-22 13:49:00 | WARNING | API request failed: method=GET path=/uapi/domestic-stock/v1/trading/inquire-balance attempt=1/3 error=Temporary API response: 500 {"rt_cd":"1","msg1":"초당 거래건수를 초과하였습니다.","msg_cd":"EGW00201","message":"EGW00201"}
+2026-06-22 13:49:01 | INFO | Holdings before order: samsung_quantity=0 available_cash=10000000
+2026-06-22 13:49:01 | INFO | Buy order request: symbol=005930 price=352500 quantity=1
+2026-06-22 13:49:01 | WARNING | API request failed: method=POST path=/uapi/domestic-stock/v1/trading/order-cash attempt=1/3 error=Temporary API response: 500 {"rt_cd":"1","msg1":"초당 거래건수를 초과하였습니다.","msg_cd":"EGW00201","message":"EGW00201"}
+2026-06-22 13:49:03 | ERROR | Trading cycle failed.
+Traceback (most recent call last):
+  File "/workspaces/ai/trader.py", line 74, in run
+    )
+  File "/workspaces/ai/trader.py", line 108, in _run_cycle
+  File "/workspaces/ai/orders.py", line 35, in submit_limit_order
+    payload = client.request(
+              ^^^^^^^^^^^^^^^
+  File "/workspaces/ai/api_client.py", line 61, in request
+    raise RuntimeError(
+RuntimeError: KIS API error: msg_cd=40580000, msg1=모의투자 장종료 입니다.
+2026-06-22 13:49:03 | INFO | Next order cycle will not start before 13:54:03.
+2026-06-22 13:54:03 | INFO | Trading cycle started.
+2026-06-22 13:54:03 | INFO | Current price: 353500 KRW
+2026-06-22 13:54:03 | WARNING | API request failed: method=GET path=/uapi/domestic-stock/v1/trading/inquire-balance attempt=1/3 error=Temporary API response: 500 {"rt_cd":"1","msg1":"초당 거래건수를 초과하였습니다.","msg_cd":"EGW00201","message":"EGW00201"}
+2026-06-22 13:54:04 | INFO | Holdings before order: samsung_quantity=0 available_cash=10000000
+2026-06-22 13:54:04 | INFO | Buy order request: symbol=005930 price=352500 quantity=1
+2026-06-22 13:54:04 | WARNING | API request failed: method=POST path=/uapi/domestic-stock/v1/trading/order-cash attempt=1/3 error=Temporary API response: 500 {"rt_cd":"1","msg1":"초당 거래건수를 초과하였습니다.","msg_cd":"EGW00201","message":"EGW00201"}
+2026-06-22 13:54:06 | ERROR | Trading cycle failed.
+Traceback (most recent call last):
+  File "/workspaces/ai/trader.py", line 74, in run
+    )
+  File "/workspaces/ai/trader.py", line 108, in _run_cycle
+  File "/workspaces/ai/orders.py", line 35, in submit_limit_order
+    payload = client.request(
+              ^^^^^^^^^^^^^^^
+  File "/workspaces/ai/api_client.py", line 61, in request
+    raise RuntimeError(
+RuntimeError: KIS API error: msg_cd=40580000, msg1=모의투자 장종료 입니다.
+2026-06-22 13:54:06 | INFO | Next order cycle will not start before 13:59:06.
+2026-06-22 13:59:06 | INFO | Trading cycle started.
+2026-06-22 13:59:06 | INFO | Current price: 353500 KRW
+2026-06-22 13:59:06 | WARNING | API request failed: method=GET path=/uapi/domestic-stock/v1/trading/inquire-balance attempt=1/3 error=Temporary API response: 500 {"rt_cd":"1","msg1":"초당 거래건수를 초과하였습니다.","msg_cd":"EGW00201","message":"EGW00201"}
+2026-06-22 13:59:07 | INFO | Holdings before order: samsung_quantity=0 available_cash=10000000
+2026-06-22 13:59:07 | INFO | Buy order request: symbol=005930 price=352500 quantity=1
+2026-06-22 13:59:08 | ERROR | Trading cycle failed.
+Traceback (most recent call last):
+  File "/workspaces/ai/trader.py", line 74, in run
+    )
+  File "/workspaces/ai/trader.py", line 108, in _run_cycle
+  File "/workspaces/ai/orders.py", line 35, in submit_limit_order
+    payload = client.request(
+              ^^^^^^^^^^^^^^^
+  File "/workspaces/ai/api_client.py", line 61, in request
+    raise RuntimeError(
+RuntimeError: KIS API error: msg_cd=40580000, msg1=모의투자 장종료 입니다.
+2026-06-22 13:59:08 | INFO | Next order cycle will not start before 14:04:08.
+2026-06-22 14:04:08 | INFO | Trading cycle started.
+2026-06-22 14:04:08 | INFO | Current price: 353500 KRW
+2026-06-22 14:04:08 | WARNING | API request failed: method=GET path=/uapi/domestic-stock/v1/trading/inquire-balance attempt=1/3 error=Temporary API response: 500 {"rt_cd":"1","msg1":"초당 거래건수를 초과하였습니다.","msg_cd":"EGW00201","message":"EGW00201"}
+2026-06-22 14:04:10 | INFO | Holdings before order: samsung_quantity=0 available_cash=10000000
+2026-06-22 14:04:10 | INFO | Buy order request: symbol=005930 price=352500 quantity=1
+2026-06-22 14:04:10 | WARNING | API request failed: method=POST path=/uapi/domestic-stock/v1/trading/order-cash attempt=1/3 error=Temporary API response: 500 {"rt_cd":"1","msg1":"초당 거래건수를 초과하였습니다.","msg_cd":"EGW00201","message":"EGW00201"}
+2026-06-22 14:04:11 | ERROR | Trading cycle failed.
+Traceback (most recent call last):
+  File "/workspaces/ai/trader.py", line 74, in run
+    )
+  File "/workspaces/ai/trader.py", line 108, in _run_cycle
+  File "/workspaces/ai/orders.py", line 35, in submit_limit_order
+    payload = client.request(
+              ^^^^^^^^^^^^^^^
+  File "/workspaces/ai/api_client.py", line 61, in request
+    raise RuntimeError(
+RuntimeError: KIS API error: msg_cd=40580000, msg1=모의투자 장종료 입니다.
+2026-06-22 14:04:11 | INFO | Next order cycle will not start before 14:09:11.
+2026-06-22 14:09:11 | INFO | Trading cycle started.
+2026-06-22 14:09:11 | INFO | Current price: 353500 KRW
+2026-06-22 14:09:11 | WARNING | API request failed: method=GET path=/uapi/domestic-stock/v1/trading/inquire-balance attempt=1/3 error=Temporary API response: 500 {"rt_cd":"1","msg1":"초당 거래건수를 초과하였습니다.","msg_cd":"EGW00201","message":"EGW00201"}
+2026-06-22 14:09:13 | INFO | Holdings before order: samsung_quantity=0 available_cash=10000000
+2026-06-22 14:09:13 | INFO | Buy order request: symbol=005930 price=352500 quantity=1
+2026-06-22 14:09:13 | WARNING | API request failed: method=POST path=/uapi/domestic-stock/v1/trading/order-cash attempt=1/3 error=Temporary API response: 500 {"rt_cd":"1","msg1":"초당 거래건수를 초과하였습니다.","msg_cd":"EGW00201","message":"EGW00201"}
+2026-06-22 14:09:14 | ERROR | Trading cycle failed.
+Traceback (most recent call last):
+  File "/workspaces/ai/trader.py", line 74, in run
+    )
+  File "/workspaces/ai/trader.py", line 108, in _run_cycle
+  File "/workspaces/ai/orders.py", line 35, in submit_limit_order
+    payload = client.request(
+              ^^^^^^^^^^^^^^^
+  File "/workspaces/ai/api_client.py", line 61, in request
+    raise RuntimeError(
+RuntimeError: KIS API error: msg_cd=40580000, msg1=모의투자 장종료 입니다.
+2026-06-22 14:09:14 | INFO | Next order cycle will not start before 14:14:14.
