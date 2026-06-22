@@ -30,8 +30,8 @@ class Config:
     trading_end: time = time(15, 30)
 
     # Conservative settings for the mock environment.
-    polling_interval_seconds: int = 60
-    order_cooldown_seconds: int = 300
+    polling_interval_seconds: int = 120
+    order_cooldown_seconds: int = 600
     execution_check_delay_seconds: int = 5
     request_timeout_seconds: int = 10
     max_retries: int = 2

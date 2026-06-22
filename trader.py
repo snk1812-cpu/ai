@@ -5,12 +5,15 @@ from __future__ import annotations
 import logging
 import time
 from datetime import datetime, timedelta
+from zoneinfo import ZoneInfo
 
 from account import AccountSnapshot, get_account_snapshot
 from api_client import APIClient
 from config import Config
 from market_data import get_current_price
 from orders import submit_limit_order
+
+KST = ZoneInfo("Asia/Seoul")
 
 
 class SamsungAutoTrader:
@@ -36,7 +39,7 @@ class SamsungAutoTrader:
         )
 
         while True:
-            now = datetime.now()
+            now = datetime.now(KST)
 
             if now.time() >= self.config.trading_end:
                 self.logger.info("Trading window ended. Program will stop.")
@@ -75,7 +78,7 @@ class SamsungAutoTrader:
             except Exception:
                 self.logger.exception("Trading cycle failed.")
 
-            self.next_order_time = datetime.now() + timedelta(
+            self.next_order_time = datetime.now(KST) + timedelta(
                 seconds=self.config.order_cooldown_seconds
             )
             self.logger.info(
@@ -90,11 +93,13 @@ class SamsungAutoTrader:
             self.client, self.config, self.access_token
         )
         self.logger.info("Current price: %s KRW", current_price)
+        time.sleep(2)
 
         before = get_account_snapshot(
             self.client, self.config, self.access_token
         )
         self._log_snapshot("Holdings before order", before)
+        time.sleep(2)
 
         buy_price = max(1, current_price - self.config.buy_offset)
         sell_price = current_price + self.config.sell_offset
@@ -105,6 +110,7 @@ class SamsungAutoTrader:
             buy_price,
             self.config.order_quantity,
         )
+        time.sleep(2)
         buy_result = submit_limit_order(
             self.client,
             self.config,
@@ -148,6 +154,7 @@ class SamsungAutoTrader:
             sell_price,
             sell_quantity,
         )
+        time.sleep(2)
         sell_result = submit_limit_order(
             self.client,
             self.config,
