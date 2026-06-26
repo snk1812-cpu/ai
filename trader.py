@@ -1,15 +1,4 @@
-cat > .gitignore <<'EOF'
-__pycache__/
-*.pyc
-logs/
-token_cache.json
-.env
-EOF
-
-git rm -r --cached __pycache__ logs token_cache.json
-git add .gitignore
-git commit -m "Remove generated files and token cache"
-git push"""Trading-window control and low-frequency polling strategy."""
+"""Trading-window control and low-frequency polling strategy."""
 
 from __future__ import annotations
 
